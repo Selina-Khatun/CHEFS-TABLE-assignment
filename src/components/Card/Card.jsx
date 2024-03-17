@@ -34,12 +34,12 @@ const Card = ({ card,handleAddCard }) => {
                         <div className='flex items-center gap-2'>
                         <FaRegClock />
 
-                            <h6>{card.preparing_time} minutes</h6>
+                            <h6>{card.preparing_time}  minutes</h6>
                         </div>
 
                         <div className='flex items-center gap-2'>
                         <AiOutlineFire />
-                            <h6>{card.calories}calories</h6>
+                            <h6>{card.calories}  calories</h6>
                         </div>
                     </div>
 

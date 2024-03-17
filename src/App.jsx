@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [selectedCards, setSelectedCards] = useState([]);
   const [preparedCards, setPreparedCards] = useState([]);
+  const [totalCalories, setTotalCalories] = useState([0]);
+  const [totalTime, setTotalTime] = useState([0]);
 
   const handleAddCard = (card) => {
     // console.log(card);
@@ -22,14 +24,26 @@ function App() {
     setSelectedCards(newSelectedCards);
   };
 
-  const handlePrepared = (id, selectedCard) => {
+  const handlePrepared = (id, calories, time, selectedCard) => {
     // console.log('prepared');
     const newPreparedCards = [...preparedCards, selectedCard];
     setPreparedCards(newPreparedCards);
+
     // console.log('remove',id);
     const remainingCards = selectedCards.filter(item => item.id !== id);
-
     setSelectedCards(remainingCards);
+
+    let totalCalories = parseInt(selectedCard.calories);
+    preparedCards.forEach((item) => {
+      totalCalories = totalCalories + parseInt(item.calories);
+    })
+    setTotalCalories(totalCalories);
+
+    let totalTime = parseInt(selectedCard.preparing_time);
+    preparedCards.forEach((item) => {
+      totalTime = totalTime + parseInt(item.preparing_time);
+    })
+    setTotalTime(totalTime);
   }
   return (
     <>
@@ -41,6 +55,8 @@ function App() {
           selectedCards={selectedCards}
           handlePrepared={handlePrepared}
           preparedCards={preparedCards}
+          totalCalories={totalCalories}
+          totalTime={totalTime}
         ></Cart>
       </div>
 
