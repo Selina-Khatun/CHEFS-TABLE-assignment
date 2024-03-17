@@ -1,0 +1,6 @@
+#banner{
+    border-radius: 24px;
+    background: linear-gradient(0.00deg, rgba(3, 1, 6, 0.9),rgba(21, 11, 43, 0) 100%) , url("https://i.ibb.co/ZJM7QVF/chefs-demonstrating-cooking-skills-contest.jpg") fixed ;
+    background-size: contain;
+
+}

@@ -13,7 +13,7 @@ const Card = ({ card,handleAddCard }) => {
             <div className="card p-4 m-2 bg-base-100 border h-[99%] rounded-lg">
                 <div className=''>
                 <figure className= "rounded-xl ">
-                    <img src={card.recipe_image} alt="Shoes" className= "h-48 w-full" />
+                    <img src={card.recipe_image} alt="Shoes" className= "h-48 w-full transition duration-300 ease-in-out hover:scale-110" />
                 </figure>
                 </div>
                 <div className="card-body  p-1">
