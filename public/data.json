@@ -1,6 +1,6 @@
 [
     {
-      "recipe_id": 1,
+      "id": 1,
       "recipe_name": "Chicken Stir-Fry",
       "recipe_image": "https://i.ibb.co/RYpgTyh/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table.jpg",
       "short_description": "A delicious and easy chicken stir-fry recipe.",
@@ -14,7 +14,7 @@
       "calories": "320 calories"
     },
     {
-      "recipe_id": 2,
+      "id": 2,
       "recipe_name": "Vegetable Curry",
       "recipe_image": "https://i.ibb.co/JxHR4JZ/front-view-tasty-vegetable-salad-inside-plate-blue-table-140725-137125.jpg",
       "short_description": "A flavorful and hearty vegetable curry.",
@@ -29,7 +29,7 @@
       "calories": "250 calories"
     },
     {
-      "recipe_id": 3,
+      "id": 3,
       "recipe_name": "Pasta Primavera",
       "recipe_image": "https://i.ibb.co/jRqsKRJ/stir-fry-chicken-sweet-peppers-green-beans-2829-20110.jpg",
       "short_description": "A colorful and vibrant pasta dish with seasonal vegetables.",
@@ -44,7 +44,7 @@
       "calories": "350 calories"
     },
     {
-      "recipe_id": 4,
+      "id": 4,
       "recipe_name": "Grilled Salmon",
       "recipe_image": "https://i.ibb.co/tcpLFmn/close-up-seafood-soup-155003-430.jpg",
       "short_description": "Tender grilled salmon with a citrus marinade.",
@@ -59,7 +59,7 @@
       "calories": "280 calories"
     },
     {
-      "recipe_id": 5,
+      "id": 5,
       "recipe_name": "Caprese Salad",
       "recipe_image": "https://i.ibb.co/jR0MLQD/top-view-caesar-salad-oval-plate-green-white-checkered-tablecloth-fork-knife-dark-red-background-140.jpg",
       "short_description": "A classic Italian salad with fresh tomatoes, mozzarella, and basil.",
@@ -74,7 +74,7 @@
       "calories": "200 calories"
     },
     {
-      "recipe_id": 6,
+      "id": 6,
       "recipe_name": "Beef Tacos",
       "recipe_image": "https://i.ibb.co/0Jf4sy9/grilled-beef-taco-with-fresh-guacamole-cilantro-generated-by-ai-188544-43106.jpg",
       "short_description": "Spicy beef tacos with all the fixings.",
