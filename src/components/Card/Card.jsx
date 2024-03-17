@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaRegClock } from "react-icons/fa6";
 import { AiOutlineFire } from "react-icons/ai";
+import { ToastContainer } from 'react-toastify';
 const Card = ({ card,handleAddCard }) => {
     // console.log(card);
     const { recipe_name, recipe_image, short_description, ingredients, preparing_time, calories } = card;
@@ -44,6 +45,7 @@ const Card = ({ card,handleAddCard }) => {
 
                     <div className="card-actions text-start">
                         <button onClick={() => handleAddCard(card)} className="btn hover:bg-green-300 rounded-full bg-green-600 px-[9%] text-white my-4 py-2">Want to Cook</button>
+                   <ToastContainer></ToastContainer>
                     </div>
                 </div>
             </div>

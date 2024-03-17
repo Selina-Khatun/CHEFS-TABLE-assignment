@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Current from './Current';
 
-const Cart = ({ selectedCards,handlePrepared,preparedCards }) => {
-    
+const Cart = ({ selectedCards, handlePrepared, preparedCards }) => {
+
     return (
         <div className='border md:w-1/3 h-auto'>
 
@@ -31,7 +31,7 @@ const Cart = ({ selectedCards,handlePrepared,preparedCards }) => {
                                     <td>{selectedCard.recipe_name}</td>
                                     <td>{selectedCard.preparing_time}</td>
                                     <td>{selectedCard.calories}</td>
-                                    <td><button onClick={() => handlePrepared(selectedCard)} className="btn hover:bg-green-300 rounded-3xl bg-green-600 px-[9%] text-white">Preparing</button></td>
+                                    <td><button onClick={() => handlePrepared(selectedCard.id,selectedCard)} className="btn hover:bg-green-300 rounded-3xl bg-green-600 px-[9%] text-white">Preparing</button></td>
                                 </tr>
 
                             </tbody>
@@ -43,8 +43,8 @@ const Cart = ({ selectedCards,handlePrepared,preparedCards }) => {
 
             </div>
             <Current
-             selectedCards={selectedCards} 
-             preparedCards={preparedCards}
+                selectedCards={selectedCards}
+                preparedCards={preparedCards}
             ></Current>
         </div>
     );
