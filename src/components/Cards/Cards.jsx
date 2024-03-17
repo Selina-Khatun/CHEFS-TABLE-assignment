@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Card from '../Card/Card';
 
 
-const Cards = ({handleAddCard}) => {
+const Cards = ({ handleAddCard }) => {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
@@ -14,22 +14,24 @@ const Cards = ({handleAddCard}) => {
     }, [])
 
     return (
-        <div className='md:w-2/3  grid grid-cols-1 md:grid-cols-2'>
-            {/* <h1>cards:{cards.length}</h1> */}
 
-            {
-                cards.map(card => <Card
-                    card={card}
-                    key={card.id}
-                    handleAddCard={handleAddCard}
-                ></Card>)
-            }
+            <div className='md:w-2/3  grid grid-cols-1 md:grid-cols-2'>
+                {/* <h1>cards:{cards.length}</h1> */}
 
-        </div>
+                {
+                    cards.map(card => <Card
+                        card={card}
+                        key={card.id}
+                        handleAddCard={handleAddCard}
+                    ></Card>)
+                }
+
+            </div>
+       
     );
 };
 Cards.propTypes = {
-   
-    handleAddCard:PropTypes.func
+
+    handleAddCard: PropTypes.func
 }
 export default Cards;

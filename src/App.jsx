@@ -6,6 +6,7 @@ import Cart from './components/Cart/Cart'
 import Header from './components/Header/Header'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Title from './components/Title/Title';
 function App() {
   const [selectedCards, setSelectedCards] = useState([]);
   const [preparedCards, setPreparedCards] = useState([]);
@@ -14,6 +15,10 @@ function App() {
 
   const handleAddCard = (card) => {
     // console.log(card);
+
+
+    // toast declaration *************
+
     const notify = () => toast.error("The Course is Already Selected");
     const isExist = selectedCards.find((item) => item.id == card.id);
     if (isExist) {
@@ -29,15 +34,21 @@ function App() {
     const newPreparedCards = [...preparedCards, selectedCard];
     setPreparedCards(newPreparedCards);
 
+    // remove card ************************
+
     // console.log('remove',id);
     const remainingCards = selectedCards.filter(item => item.id !== id);
     setSelectedCards(remainingCards);
+
+    // total Calories calculation **************
 
     let totalCalories = parseInt(selectedCard.calories);
     preparedCards.forEach((item) => {
       totalCalories = totalCalories + parseInt(item.calories);
     })
     setTotalCalories(totalCalories);
+
+    // total Time calculation **************
 
     let totalTime = parseInt(selectedCard.preparing_time);
     preparedCards.forEach((item) => {
@@ -49,6 +60,7 @@ function App() {
     <>
 
       <Header></Header>
+      <Title></Title>
       <div className='flex'>
         <Cards handleAddCard={handleAddCard}></Cards>
         <Cart
