@@ -16,7 +16,6 @@ function App() {
   const handleAddCard = (card) => {
     // console.log(card);
 
-
     // toast declaration *************
 
     const notify = () => toast.error("The Course is Already Selected");
@@ -61,7 +60,7 @@ function App() {
 
       <Header></Header>
       <Title></Title>
-      <div className='flex'>
+      <div className='flex md:flex-row flex-col'>
         <Cards handleAddCard={handleAddCard}></Cards>
         <Cart
           selectedCards={selectedCards}
