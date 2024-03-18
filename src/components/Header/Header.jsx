@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-
+import { FaRegUserCircle } from "react-icons/fa";
 const Header = () => {
     return (
         <header>
@@ -56,9 +56,9 @@ const Header = () => {
                             </svg>
                         </div>
                     </div>
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <div tabIndex={0} role="button" className="btn  bg-green-500 items-center  btn-success btn-circle  avatar">
+                        <div className="  rounded-full">
+                            <FaRegUserCircle  />
                         </div>
                     </div>
                 </div>

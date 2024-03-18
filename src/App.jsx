@@ -18,7 +18,7 @@ function App() {
 
     // toast declaration *************
 
-    const notify = () => toast.error("The Course is Already Selected");
+    const notify = () => toast.error("This item is Already Selected");
     const isExist = selectedCards.find((item) => item.id == card.id);
     if (isExist) {
       return notify();
